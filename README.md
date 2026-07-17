@@ -2,26 +2,21 @@
 
 ## 📖 Project Overview
 
-This repository contains my completed tasks for the **Neurofive Solutions Machine Learning Track**. Throughout these projects, I explored the complete machine learning workflow—from understanding and analyzing datasets to building predictive models using Python and Scikit-learn.
+This repository contains my solutions for the **Neurofive Solutions Machine Learning Track**. Throughout this track, I explore the complete machine learning workflow, starting from data exploration and preprocessing to building, evaluating, and improving machine learning models.
 
-The repository currently includes three projects:
-
-* **Task 1:** Titanic Exploratory Data Analysis (EDA)
-* **Task 2:** Titanic Survival Prediction using Logistic Regression
-* **Task 3:** House Price Prediction using Linear Regression
-
-These projects demonstrate practical skills in data preprocessing, visualization, machine learning, and model evaluation.
+The projects in this repository demonstrate practical applications of Python, data analysis, machine learning algorithms, and model evaluation techniques using real-world datasets.
 
 ---
 
 # 📂 Repository Structure
 
-```
+```text
 neurofive-ml-track/
 │
 ├── Titanic_EDA.ipynb
 ├── Titanic_Classification.ipynb
 ├── House_Price_Prediction.ipynb
+├── Model_Evaluation_and_Tuning.ipynb
 ├── README.md
 └── requirements.txt
 ```
@@ -32,36 +27,35 @@ neurofive-ml-track/
 
 ## Objective
 
-Perform exploratory data analysis on the Titanic dataset to understand its structure, identify missing values, analyze feature distributions, and uncover patterns before building machine learning models.
+Perform Exploratory Data Analysis (EDA) on the Titanic dataset to understand the data before applying machine learning algorithms.
 
 ### Activities Performed
 
 * Loaded the Titanic dataset using Pandas
-* Explored the dataset with `head()`, `info()`, and `describe()`
+* Explored the dataset using `head()`, `info()`, and `describe()`
 * Identified missing values
 * Distinguished numerical and categorical features
-* Checked duplicate records
 * Performed descriptive statistical analysis
-* Created multiple visualizations using Matplotlib and Seaborn
-* Summarized important observations
+* Created visualizations using Matplotlib and Seaborn
+* Summarized key findings and insights
 
-### Key Insights
+### Key Findings
 
-* The dataset contains **891 passengers** and **12 columns**.
-* Cabin has the highest number of missing values.
-* Female passengers had a significantly higher survival rate than male passengers.
-* First-class passengers survived more frequently than third-class passengers.
-* Passenger age and fare influenced survival patterns.
+* The dataset contains **891 passengers** and **12 features**.
+* Cabin contains the highest number of missing values.
+* Female passengers had a higher survival rate than male passengers.
+* First-class passengers were more likely to survive.
+* Age and fare influenced passenger survival.
 
 ---
 
-# 🤖 Task 2 – Titanic Survival Prediction
+# 🤖 Task 2 – Titanic Survival Prediction (Classification)
 
 ## Objective
 
-Build a machine learning classification model to predict whether a passenger survived the Titanic disaster.
+Develop a machine learning classification model to predict passenger survival using the Titanic dataset.
 
-### Machine Learning Workflow
+### Workflow
 
 * Data Cleaning
 * Missing Value Handling
@@ -80,25 +74,25 @@ Build a machine learning classification model to predict whether a passenger sur
 
 ### Outcome
 
-The Logistic Regression model achieved a strong baseline accuracy and demonstrated the complete supervised machine learning classification workflow.
+Successfully trained and evaluated a Logistic Regression model capable of predicting passenger survival with strong baseline performance.
 
 ---
 
-# 🏠 Task 3 – House Price Prediction
+# 🏠 Task 3 – House Price Prediction (Regression)
 
 ## Objective
 
-Develop a Linear Regression model to predict California house prices based on selected housing features.
+Build a Linear Regression model to predict California house prices using selected housing features.
 
-### Machine Learning Workflow
+### Workflow
 
-* Loaded the California Housing dataset
+* Dataset Loading
 * Data Cleaning
 * Feature Selection
 * Data Preprocessing
 * Train-Test Split
 * Linear Regression Model
-* House Price Prediction
+* Prediction
 * Model Evaluation
 
 ### Selected Features
@@ -112,7 +106,7 @@ Develop a Linear Regression model to predict California house prices based on se
 ### Evaluation Metrics
 
 * Root Mean Squared Error (RMSE)
-* R² Score (Coefficient of Determination)
+* R² Score
 
 ### Visualization
 
@@ -121,7 +115,47 @@ Develop a Linear Regression model to predict California house prices based on se
 
 ### Outcome
 
-The Linear Regression model successfully predicted house prices and was evaluated using RMSE and R² Score, demonstrating the fundamentals of regression analysis.
+Successfully developed and evaluated a Linear Regression model for predicting house prices and interpreted its performance using RMSE and R² score.
+
+---
+
+# ⚙️ Task 4 – Model Evaluation & Hyperparameter Tuning
+
+## Objective
+
+Improve a classification model by evaluating it beyond accuracy and optimizing its performance using hyperparameter tuning.
+
+### Workflow
+
+* Revisited the Titanic classification dataset
+* Trained a baseline Decision Tree Classifier
+* Evaluated model performance using multiple metrics
+* Applied GridSearchCV for hyperparameter tuning
+* Tuned multiple model parameters
+* Compared baseline and tuned models
+* Visualized the confusion matrix
+
+### Hyperparameters Tuned
+
+* `max_depth`
+* `min_samples_split`
+* `criterion`
+
+### Evaluation Metrics
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+
+### Why Accuracy Alone Is Not Enough
+
+Accuracy measures the overall percentage of correct predictions, but it may not reflect how well a model performs on minority classes. Precision, Recall, and F1-score provide a more complete evaluation by measuring prediction quality, the ability to identify positive cases, and the balance between both metrics.
+
+### Outcome
+
+Improved the Decision Tree model using GridSearchCV and compared the tuned model with the baseline model to understand the impact of hyperparameter optimization.
 
 ---
 
@@ -137,42 +171,38 @@ The Linear Regression model successfully predicted house prices and was evaluate
 
 ---
 
-# 🎯 Skills Demonstrated
+# 💡 Machine Learning Algorithms
+
+* Logistic Regression
+* Linear Regression
+* Decision Tree Classifier
+
+---
+
+# 📈 Skills Demonstrated
 
 * Data Cleaning
 * Data Preprocessing
 * Exploratory Data Analysis (EDA)
 * Data Visualization
-* Feature Selection
+* Feature Engineering
 * Feature Encoding
 * Machine Learning
 * Classification
 * Regression
 * Logistic Regression
 * Linear Regression
+* Decision Tree Classification
+* Hyperparameter Tuning
+* GridSearchCV
 * Model Evaluation
 * Accuracy Score
+* Precision
+* Recall
+* F1-Score
 * Confusion Matrix
 * RMSE
 * R² Score
-
----
-
-# 🚀 Future Improvements
-
-As I continue through the Neurofive ML Track, this repository will be expanded with additional machine learning projects, including:
-
-* Decision Tree
-* Random Forest
-* Support Vector Machine (SVM)
-* K-Nearest Neighbors (KNN)
-* XGBoost
-* Feature Engineering
-* Hyperparameter Tuning
-* Cross Validation
-* Model Comparison
-* Streamlit Dashboard
-* Machine Learning Model Deployment
 
 ---
 
@@ -182,9 +212,27 @@ As I continue through the Neurofive ML Track, this repository will be expanded w
 
 * Titanic – Machine Learning from Disaster (Kaggle)
 
-### Housing Dataset
+### California Housing Dataset
 
-* California Housing Dataset
+* California Housing Prices
+
+---
+
+# 🚀 Future Improvements
+
+This repository will continue to grow as I complete additional machine learning projects in the Neurofive ML Track, including:
+
+* Random Forest
+* Support Vector Machine (SVM)
+* K-Nearest Neighbors (KNN)
+* Naive Bayes
+* XGBoost
+* Clustering Algorithms
+* Feature Engineering
+* Cross Validation
+* Model Comparison
+* Streamlit Dashboard
+* Machine Learning Model Deployment
 
 ---
 
@@ -202,6 +250,6 @@ Computer Science Student | Machine Learning Enthusiast | Generative AI & Agentic
 
 # ⭐ Acknowledgements
 
-This repository is part of my learning journey in the **Neurofive Solutions Machine Learning Track**, where I am building practical experience in data analysis, machine learning, and predictive modeling through hands-on projects.
+This repository is part of my learning journey in the **Neurofive Solutions Machine Learning Track**, where I am building practical skills in data analysis, machine learning, model evaluation, and predictive analytics using Python and Scikit-learn.
 
-If you found this repository useful, consider giving it a ⭐.
+Thank you for visiting this repository. If you find it useful, consider giving it a ⭐.
