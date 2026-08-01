@@ -19,6 +19,7 @@ neurofive-ml-track/
 ├── Model_Evaluation_and_Tuning.ipynb
 ├── Customer_Churn_Prediction.ipynb
 ├── ML_Pipeline_Feature_Engineering.ipynb
+├── Ensemble_Learning_RandomForest_vs_XGBoost.ipynb
 ├── Titanic_Pipeline.pkl
 ├── README.md
 └── requirements.txt
@@ -327,6 +328,90 @@ As I continue the Neurofive ML Track, I plan to expand this repository with addi
 * MLOps and Model Monitoring
 
 ---
+# 🌲 Task 7 – Ensemble Learning: Random Forest vs XGBoost
+
+## 📖 Objective
+
+The objective of this task was to explore ensemble learning techniques by implementing and comparing **Random Forest** and **XGBoost** with a baseline **Logistic Regression** model. This project demonstrates how ensemble methods improve predictive performance, generalization, and model robustness on a real-world classification problem.
+
+---
+
+## 🔄 Workflow
+
+* Loaded and preprocessed the Titanic dataset.
+* Performed data cleaning and handled missing values.
+* Applied feature engineering by creating **FamilySize** and **IsAlone** features.
+* Encoded categorical variables and scaled numerical features using **ColumnTransformer** and **Pipeline**.
+* Trained a baseline **Logistic Regression** model.
+* Trained a **Random Forest Classifier**.
+* Installed and trained an **XGBoost Classifier**.
+* Evaluated all models using multiple performance metrics.
+* Compared model performance in a structured comparison table.
+* Visualized and analyzed feature importance for both ensemble models.
+
+---
+
+## 🤖 Models Compared
+
+* Logistic Regression (Baseline)
+* Random Forest Classifier
+* XGBoost Classifier
+
+---
+
+## 📊 Evaluation Metrics
+
+The following evaluation metrics were used to compare model performance:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
+
+---
+
+## 📈 Feature Importance Analysis
+
+Feature importance scores were extracted from both **Random Forest** and **XGBoost** models to identify the most influential features affecting passenger survival. The comparison illustrates how different ensemble algorithms prioritize features based on their learning strategies and decision-making processes.
+
+---
+
+## 🌟 Random Forest vs XGBoost
+
+### Random Forest
+
+* Uses the **Bagging (Bootstrap Aggregating)** technique.
+* Builds multiple decision trees independently using random subsets of the training data.
+* Combines predictions through majority voting.
+* Primarily reduces variance and helps prevent overfitting.
+
+### XGBoost
+
+* Uses the **Gradient Boosting** technique.
+* Builds trees sequentially, where each new tree learns from the errors of the previous trees.
+* Optimizes model performance through gradient-based learning.
+* Focuses on reducing both bias and variance while achieving high predictive accuracy.
+
+---
+
+## 📋 Model Comparison
+
+The performance of all three models was compared using multiple evaluation metrics to identify the most effective classifier for the Titanic survival prediction problem.
+
+| Model               | Accuracy                    | Precision  | Recall     | F1-Score   |
+| ------------------- | --------------------------- | ---------- | ---------- | ---------- |
+| Logistic Regression | *(Update with your result)* | *(Update)* | *(Update)* | *(Update)* |
+| Random Forest       | *(Update with your result)* | *(Update)* | *(Update)* | *(Update)* |
+| XGBoost             | *(Update with your result)* | *(Update)* | *(Update)* | *(Update)* |
+
+---
+
+## ✅ Outcome
+
+Successfully implemented and evaluated two industry-standard ensemble learning algorithms alongside a baseline Logistic Regression model. The project demonstrates practical knowledge of **bagging**, **boosting**, **feature engineering**, **model evaluation**, and **feature importance analysis**, providing hands-on experience with machine learning techniques widely used in real-world production systems.
+
 
 # 👨‍💻 Author
 
