@@ -13,16 +13,30 @@ Each task demonstrates practical implementation using Python, Pandas, NumPy, Sci
 ```text
 neurofive-ml-track/
 │
-├── Titanic_EDA.ipynb
-├── Titanic_Classification.ipynb
-├── House_Price_Prediction.ipynb
-├── Model_Evaluation_and_Tuning.ipynb
+├── Week1_Titanic_EDA.ipynb
+├── Week2_Titanic_Classification.ipynb
+├── Week3_House_Price_Prediction.ipynb
+├── Week4_Model_Evaluation_and_Tuning.ipynb
+├── Week5_Handling_Imbalanced_Data.ipynb   ⭐ NEW
 ├── Customer_Churn_Prediction.ipynb
 ├── ML_Pipeline_Feature_Engineering.ipynb
 ├── Ensemble_Learning_RandomForest_vs_XGBoost.ipynb
-├── Titanic_Pipeline.pkl
+│
+├── datasets/
+│   └── creditcard.csv
+│
+├── models/
+│   └── Titanic_Pipeline.pkl
+│
+├── images/
+│   ├── class_distribution.png
+│   ├── confusion_matrix_before.png
+│   ├── confusion_matrix_after.png
+│   └── performance_comparison.png
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
@@ -411,6 +425,59 @@ The performance of all three models was compared using multiple evaluation metri
 ## ✅ Outcome
 
 Successfully implemented and evaluated two industry-standard ensemble learning algorithms alongside a baseline Logistic Regression model. The project demonstrates practical knowledge of **bagging**, **boosting**, **feature engineering**, **model evaluation**, and **feature importance analysis**, providing hands-on experience with machine learning techniques widely used in real-world production systems.
+
+# Week 5 - Handling Imbalanced & Messy Real-World Data
+
+## Objective
+
+Learn how to identify and handle imbalanced datasets using the Credit Card Fraud Detection dataset.
+
+## Dataset
+
+- Credit Card Fraud Detection Dataset (Kaggle)
+
+## Tasks Completed
+
+- Loaded and explored the dataset
+- Checked the class distribution
+- Visualized the imbalance using a bar chart
+- Trained a Logistic Regression model on the original data
+- Evaluated Accuracy, Precision, Recall, and F1-score
+- Applied SMOTE (Synthetic Minority Oversampling Technique)
+- Retrained the model using balanced data
+- Compared model performance before and after SMOTE
+- Explained why Accuracy is a misleading metric for imbalanced datasets
+
+## Results
+
+The original dataset was highly imbalanced, with fraudulent transactions representing only a small fraction of the data.
+
+After applying SMOTE:
+
+- Improved Recall for the fraud class
+- Improved F1-score
+- Better detection of fraudulent transactions
+- Demonstrated why Precision, Recall, and F1-score are more informative than Accuracy for imbalanced datasets
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+
+## Repository Structure
+
+```
+Week5_Handling_Imbalanced_Data.ipynb
+datasets/creditcard.csv
+images/
+README.md
+requirements.txt
+```
 
 
 # 👨‍💻 Author
