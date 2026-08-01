@@ -2,9 +2,9 @@
 
 ## 📖 Project Overview
 
-This repository contains my solutions for the **Neurofive Solutions Machine Learning Track**. Throughout this learning journey, I explore the complete machine learning pipeline—from data exploration and preprocessing to model development, evaluation, hyperparameter tuning, and solving real-world business problems.
+This repository contains my solutions for the **Neurofive Solutions Machine Learning Track**. Throughout this learning journey, I explore the complete machine learning lifecycle—from data exploration and preprocessing to feature engineering, model development, evaluation, hyperparameter tuning, and solving real-world business problems using industry-standard tools and workflows.
 
-Each task focuses on a different machine learning concept and demonstrates practical implementation using Python, Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn.
+Each task demonstrates practical implementation using Python, Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn while following machine learning best practices.
 
 ---
 
@@ -18,6 +18,8 @@ neurofive-ml-track/
 ├── House_Price_Prediction.ipynb
 ├── Model_Evaluation_and_Tuning.ipynb
 ├── Customer_Churn_Prediction.ipynb
+├── ML_Pipeline_Feature_Engineering.ipynb
+├── Titanic_Pipeline.pkl
 ├── README.md
 └── requirements.txt
 ```
@@ -177,18 +179,60 @@ Develop machine learning models to predict customer churn using the IBM Telco Cu
 
 ### Feature Importance
 
-The Decision Tree model was used to identify the most influential features affecting customer churn through `feature_importances_`.
+The Decision Tree model was used to identify the most influential features affecting customer churn using `feature_importances_`.
 
 ### Business Insights
 
 * Customers with month-to-month contracts are more likely to churn.
 * Customers with shorter tenure have a higher risk of leaving.
-* Monthly charges and contract type play a significant role in predicting churn.
-* Retention strategies focused on these customer groups can help reduce churn and improve long-term customer loyalty.
+* Monthly charges and contract type significantly influence customer churn.
+* Retention strategies targeting these customers can improve long-term loyalty.
 
 ### Outcome
 
-Successfully built and compared two classification models while analyzing customer behavior and presenting actionable business insights.
+Successfully built and compared two classification models while extracting meaningful business insights from customer behavior.
+
+---
+
+# 🔄 Task 6 – ML Pipeline with Feature Engineering
+
+## Objective
+
+Build a reusable machine learning pipeline using Scikit-learn's `Pipeline` and `ColumnTransformer` to automate preprocessing, feature engineering, and model training while preventing data leakage.
+
+### Workflow
+
+* Reused the Titanic dataset
+* Created two engineered features:
+
+  * **FamilySize**
+  * **IsAlone**
+* Applied **StandardScaler** to numerical features
+* Applied **OneHotEncoder** to categorical features
+* Combined preprocessing using **ColumnTransformer**
+* Built an end-to-end **Pipeline**
+* Trained and evaluated the pipeline
+* Compared pipeline performance with the manual preprocessing approach
+* Saved the trained pipeline using **Joblib**
+
+### Feature Engineering
+
+Two new features were introduced to improve model performance:
+
+* **FamilySize = SibSp + Parch + 1**
+* **IsAlone = 1 if FamilySize == 1 else 0**
+
+### Technologies Used
+
+* Pipeline
+* ColumnTransformer
+* StandardScaler
+* OneHotEncoder
+* Joblib
+
+### Outcome
+
+Developed a reusable, production-ready machine learning pipeline that automates preprocessing and modeling while reducing the risk of inconsistent preprocessing and train-test data leakage.
 
 ---
 
@@ -201,6 +245,7 @@ Successfully built and compared two classification models while analyzing custom
 * Matplotlib
 * Seaborn
 * Scikit-learn
+* Joblib
 
 ---
 
@@ -209,6 +254,7 @@ Successfully built and compared two classification models while analyzing custom
 * Logistic Regression
 * Linear Regression
 * Decision Tree Classifier
+* Pipeline-based Logistic Regression
 
 ---
 
@@ -220,6 +266,12 @@ Successfully built and compared two classification models while analyzing custom
 * Data Visualization
 * Feature Engineering
 * Feature Encoding
+* Feature Scaling
+* Pipeline Development
+* ColumnTransformer
+* StandardScaler
+* OneHotEncoder
+* Model Serialization
 * Classification
 * Regression
 * Logistic Regression
@@ -267,11 +319,12 @@ As I continue the Neurofive ML Track, I plan to expand this repository with addi
 * XGBoost
 * Clustering Algorithms
 * Cross Validation
-* Feature Engineering
+* Advanced Feature Engineering
 * Model Comparison
 * Streamlit Dashboard
 * Machine Learning Model Deployment
 * Explainable AI (XAI)
+* MLOps and Model Monitoring
 
 ---
 
@@ -279,7 +332,7 @@ As I continue the Neurofive ML Track, I plan to expand this repository with addi
 
 **Faizan Khan**
 
-Computer Science Student | Machine Learning Enthusiast | Generative AI & Agentic AI Learner
+Computer Science Student | Machine Learning Engineer | Generative AI & Agentic AI Enthusiast
 
 * **GitHub:** https://github.com/faizankhanfreelancer
 * **LinkedIn:** https://www.linkedin.com/in/faizankhan-cs
@@ -288,6 +341,6 @@ Computer Science Student | Machine Learning Enthusiast | Generative AI & Agentic
 
 # ⭐ Acknowledgements
 
-This repository documents my progress through the **Neurofive Solutions Machine Learning Track**, where I am developing practical skills in data analysis, machine learning, predictive modeling, and solving real-world business problems using Python and Scikit-learn.
+This repository documents my progress through the **Neurofive Solutions Machine Learning Track**, where I continue building practical skills in data analysis, feature engineering, machine learning, model evaluation, and production-ready ML pipelines using Python and Scikit-learn.
 
 Thank you for visiting this repository. If you find it useful, consider giving it a ⭐.
