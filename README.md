@@ -17,9 +17,12 @@ neurofive-ml-track/
 ├── Week2_Titanic_Classification.ipynb
 ├── Week3_House_Price_Prediction.ipynb
 ├── Week4_Model_Evaluation_and_Tuning.ipynb
-├── Week5_Handling_Imbalanced_Data.ipynb   ⭐ NEW
+├── Week5_Handling_Imbalanced_Data.ipynb
+├── Week6_ML_Pipeline_Feature_Engineering.ipynb
+├── Week7_KNN_Classification.ipynb
+├── Week8_SVM_Classification.ipynb
+│
 ├── Customer_Churn_Prediction.ipynb
-├── ML_Pipeline_Feature_Engineering.ipynb
 ├── Ensemble_Learning_RandomForest_vs_XGBoost.ipynb
 │
 ├── datasets/
@@ -41,7 +44,7 @@ neurofive-ml-track/
 
 ---
 
-# 📊 Task 1 – Titanic Exploratory Data Analysis (EDA)
+# 📊 week 1 – Titanic Exploratory Data Analysis (EDA)
 
 ## Objective
 
@@ -63,7 +66,7 @@ Successfully explored the Titanic dataset and identified important relationships
 
 ---
 
-# 🤖 Task 2 – Titanic Survival Prediction (Classification)
+# 🤖 week 2 – Titanic Survival Prediction (Classification)
 
 ## Objective
 
@@ -92,7 +95,7 @@ Developed a Logistic Regression classifier capable of predicting passenger survi
 
 ---
 
-# 🏠 Task 3 – House Price Prediction (Regression)
+# 🏠 week 3 – House Price Prediction (Regression)
 
 ## Objective
 
@@ -124,7 +127,7 @@ Built a regression model capable of estimating house prices while evaluating pre
 
 ---
 
-# ⚙️ Task 4 – Model Evaluation & Hyperparameter Tuning
+# ⚙️ week 4 – Model Evaluation & Hyperparameter Tuning
 
 ## Objective
 
@@ -159,7 +162,7 @@ Learned how hyperparameter tuning and comprehensive evaluation improve the relia
 
 ---
 
-# 📞 Task 5 – Customer Churn Prediction (Business Problem)
+# 📞 week 5 – Customer Churn Prediction (Business Problem)
 
 ## Objective
 
@@ -209,7 +212,7 @@ Successfully built and compared two classification models while extracting meani
 
 ---
 
-# 🔄 Task 6 – ML Pipeline with Feature Engineering
+# 🔄 week 6 – ML Pipeline with Feature Engineering
 
 ## Objective
 
@@ -232,7 +235,7 @@ Build a reusable machine learning pipeline using Scikit-learn's `Pipeline` and `
 
 ### Feature Engineering
 
-Two new features were introduced to improve model performance:
+Two new features were introduced:
 
 * **FamilySize = SibSp + Parch + 1**
 * **IsAlone = 1 if FamilySize == 1 else 0**
@@ -247,7 +250,116 @@ Two new features were introduced to improve model performance:
 
 ### Outcome
 
-Developed a reusable, production-ready machine learning pipeline that automates preprocessing and modeling while reducing the risk of inconsistent preprocessing and train-test data leakage.
+Developed a reusable machine learning pipeline that automates preprocessing and modeling while reducing the risk of inconsistent preprocessing and train-test data leakage.
+
+---
+
+# 📍 week 7 – K-Nearest Neighbors (KNN) Classification
+
+## Objective
+
+Implement a K-Nearest Neighbors (KNN) classification model to understand distance-based classification and analyze how different values of K affect model performance.
+
+### Workflow
+
+* Prepared and preprocessed the dataset
+* Selected relevant features for classification
+* Applied feature scaling
+* Implemented the KNN Classifier using Scikit-learn
+* Tested different values of K
+* Compared model performance for different K values
+* Generated predictions
+* Evaluated the model using classification metrics
+* Analyzed the confusion matrix
+
+### Hyperparameter
+
+* `n_neighbors (K)`
+
+### Evaluation Metrics
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
+
+### Key Learning
+
+KNN is a distance-based algorithm, so feature scaling is important to ensure that features with larger numerical ranges do not dominate the distance calculations.
+
+### Outcome
+
+Successfully implemented KNN classification and learned how the choice of K and feature scaling can influence classification performance.
+
+---
+
+# 🧠 week 8 – Support Vector Machine (SVM) Classification
+
+## Objective
+
+Implement a Support Vector Machine (SVM) classification model to understand how SVM separates different classes and how kernel selection affects classification performance.
+
+### Workflow
+
+* Prepared and preprocessed the dataset
+* Selected relevant features for classification
+* Applied feature scaling
+* Implemented an SVM Classifier using Scikit-learn
+* Experimented with different kernel configurations
+* Generated predictions
+* Evaluated model performance
+* Compared classification results using standard evaluation metrics
+
+### Kernels Explored
+
+* Linear Kernel
+* RBF Kernel
+* Polynomial Kernel
+
+### Evaluation Metrics
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
+
+### Key Learning
+
+SVM attempts to find an optimal decision boundary that separates different classes while maximizing the margin between them. Kernel functions allow SVM to handle non-linear classification problems.
+
+### Outcome
+
+Successfully implemented an SVM classification model and gained practical experience with feature scaling, kernel selection, decision boundaries, and model evaluation.
+
+---
+
+# 🌲 Task 9 – Ensemble Learning: Random Forest vs XGBoost
+
+## Objective
+
+The objective of this task was to explore ensemble learning techniques by implementing and comparing **Random Forest** and **XGBoost** with a baseline **Logistic Regression** model.
+
+### Models Compared
+
+* Logistic Regression
+* Random Forest Classifier
+* XGBoost Classifier
+
+### Key Concepts
+
+* Bagging
+* Boosting
+* Feature Importance
+* Model Comparison
+* Ensemble Learning
+
+### Outcome
+
+Successfully implemented and evaluated ensemble learning algorithms and compared their performance with a baseline classification model.
 
 ---
 
@@ -261,6 +373,8 @@ Developed a reusable, production-ready machine learning pipeline that automates 
 * Seaborn
 * Scikit-learn
 * Joblib
+* Imbalanced-learn
+* XGBoost
 
 ---
 
@@ -269,6 +383,10 @@ Developed a reusable, production-ready machine learning pipeline that automates 
 * Logistic Regression
 * Linear Regression
 * Decision Tree Classifier
+* K-Nearest Neighbors (KNN)
+* Support Vector Machine (SVM)
+* Random Forest Classifier
+* XGBoost Classifier
 * Pipeline-based Logistic Regression
 
 ---
@@ -292,6 +410,9 @@ Developed a reusable, production-ready machine learning pipeline that automates 
 * Logistic Regression
 * Linear Regression
 * Decision Tree Classification
+* KNN Classification
+* SVM Classification
+* Ensemble Learning
 * Hyperparameter Tuning
 * GridSearchCV
 * Model Evaluation
@@ -304,6 +425,7 @@ Developed a reusable, production-ready machine learning pipeline that automates 
 * R² Score
 * Business Analytics
 * Customer Churn Analysis
+* Feature Importance
 
 ---
 
@@ -321,164 +443,28 @@ Developed a reusable, production-ready machine learning pipeline that automates 
 
 * IBM Telco Customer Churn Dataset (Kaggle)
 
+### Credit Card Fraud Dataset
+
+* Credit Card Fraud Detection Dataset (Kaggle)
+
 ---
 
 # 🚀 Future Improvements
 
 As I continue the Neurofive ML Track, I plan to expand this repository with additional machine learning projects and techniques, including:
 
-* Random Forest
-* Support Vector Machine (SVM)
-* K-Nearest Neighbors (KNN)
 * Naive Bayes
-* XGBoost
 * Clustering Algorithms
-* Cross Validation
 * Advanced Feature Engineering
+* Cross Validation
 * Model Comparison
+* XGBoost Hyperparameter Tuning
 * Streamlit Dashboard
 * Machine Learning Model Deployment
 * Explainable AI (XAI)
 * MLOps and Model Monitoring
 
 ---
-# 🌲 Task 7 – Ensemble Learning: Random Forest vs XGBoost
-
-## 📖 Objective
-
-The objective of this task was to explore ensemble learning techniques by implementing and comparing **Random Forest** and **XGBoost** with a baseline **Logistic Regression** model. This project demonstrates how ensemble methods improve predictive performance, generalization, and model robustness on a real-world classification problem.
-
----
-
-## 🔄 Workflow
-
-* Loaded and preprocessed the Titanic dataset.
-* Performed data cleaning and handled missing values.
-* Applied feature engineering by creating **FamilySize** and **IsAlone** features.
-* Encoded categorical variables and scaled numerical features using **ColumnTransformer** and **Pipeline**.
-* Trained a baseline **Logistic Regression** model.
-* Trained a **Random Forest Classifier**.
-* Installed and trained an **XGBoost Classifier**.
-* Evaluated all models using multiple performance metrics.
-* Compared model performance in a structured comparison table.
-* Visualized and analyzed feature importance for both ensemble models.
-
----
-
-## 🤖 Models Compared
-
-* Logistic Regression (Baseline)
-* Random Forest Classifier
-* XGBoost Classifier
-
----
-
-## 📊 Evaluation Metrics
-
-The following evaluation metrics were used to compare model performance:
-
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-* Classification Report
-
----
-
-## 📈 Feature Importance Analysis
-
-Feature importance scores were extracted from both **Random Forest** and **XGBoost** models to identify the most influential features affecting passenger survival. The comparison illustrates how different ensemble algorithms prioritize features based on their learning strategies and decision-making processes.
-
----
-
-## 🌟 Random Forest vs XGBoost
-
-### Random Forest
-
-* Uses the **Bagging (Bootstrap Aggregating)** technique.
-* Builds multiple decision trees independently using random subsets of the training data.
-* Combines predictions through majority voting.
-* Primarily reduces variance and helps prevent overfitting.
-
-### XGBoost
-
-* Uses the **Gradient Boosting** technique.
-* Builds trees sequentially, where each new tree learns from the errors of the previous trees.
-* Optimizes model performance through gradient-based learning.
-* Focuses on reducing both bias and variance while achieving high predictive accuracy.
-
----
-
-## 📋 Model Comparison
-
-The performance of all three models was compared using multiple evaluation metrics to identify the most effective classifier for the Titanic survival prediction problem.
-
-| Model               | Accuracy                    | Precision  | Recall     | F1-Score   |
-| ------------------- | --------------------------- | ---------- | ---------- | ---------- |
-| Logistic Regression | *(Update with your result)* | *(Update)* | *(Update)* | *(Update)* |
-| Random Forest       | *(Update with your result)* | *(Update)* | *(Update)* | *(Update)* |
-| XGBoost             | *(Update with your result)* | *(Update)* | *(Update)* | *(Update)* |
-
----
-
-## ✅ Outcome
-
-Successfully implemented and evaluated two industry-standard ensemble learning algorithms alongside a baseline Logistic Regression model. The project demonstrates practical knowledge of **bagging**, **boosting**, **feature engineering**, **model evaluation**, and **feature importance analysis**, providing hands-on experience with machine learning techniques widely used in real-world production systems.
-
-# Week 5 - Handling Imbalanced & Messy Real-World Data
-
-## Objective
-
-Learn how to identify and handle imbalanced datasets using the Credit Card Fraud Detection dataset.
-
-## Dataset
-
-- Credit Card Fraud Detection Dataset (Kaggle)
-
-## Tasks Completed
-
-- Loaded and explored the dataset
-- Checked the class distribution
-- Visualized the imbalance using a bar chart
-- Trained a Logistic Regression model on the original data
-- Evaluated Accuracy, Precision, Recall, and F1-score
-- Applied SMOTE (Synthetic Minority Oversampling Technique)
-- Retrained the model using balanced data
-- Compared model performance before and after SMOTE
-- Explained why Accuracy is a misleading metric for imbalanced datasets
-
-## Results
-
-The original dataset was highly imbalanced, with fraudulent transactions representing only a small fraction of the data.
-
-After applying SMOTE:
-
-- Improved Recall for the fraud class
-- Improved F1-score
-- Better detection of fraudulent transactions
-- Demonstrated why Precision, Recall, and F1-score are more informative than Accuracy for imbalanced datasets
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Imbalanced-learn (SMOTE)
-
-## Repository Structure
-
-```
-Week5_Handling_Imbalanced_Data.ipynb
-datasets/creditcard.csv
-images/
-README.md
-requirements.txt
-```
-
 
 # 👨‍💻 Author
 
